@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(to right, #74ebd5, #8a9ced);
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+}
+
+.container {
+    background-color: #bcdb1f;
+    max-width: 900px;
+    margin: auto;
+    height: 60vh;
+}
+
+.message {
+    background-color: yellowgreen;
+    max-width: 35%;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 8px;
+    border-radius: 16px;
+}
+
+.right {
+    float: right;
+    clear: both;
+    margin-right: 8px;
+}
+
+.left {
+    float: left;
+    clear: both;
+}
+
+/* .userjoined-center {
+    margin: auto;
+    clear: both;
+    text-align: center;
+    background-color: #8a9ced;
+} */
+.newuser-box {
+    background-color: rgba(148, 220, 244, 0.628);
+    max-width: 20%;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: 13px;
+    clear: both;
+    /* margin-top: 15px;
+    margin-left: 8px; */
+    border-radius: 16px;
+}
+
+.send {
+    background-color: #1fa38b;
+    max-width: 900px;
+    margin: auto;
+    height: 8vh;
+    padding-top: 10px;
+}
+
+#send-container {
+    /* background-color: rgb(9, 80, 142); */
+    text-align: center;
+    max-width: 900px;
+    height: 60%;
+    margin: auto;
+}
+
+#messageInp {
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.button {
+    width: 50px;
+    height: 100%;
+    border-radius: 10px;
+}
