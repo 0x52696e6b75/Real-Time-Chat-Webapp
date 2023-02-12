@@ -27,6 +27,7 @@ io.on('connection', (socket) => {
         userNames[socket.id] = userName;
         socket.userName = userName;
         socket.broadcast.emit('user-joined', userNames[socket.id]);
+        socket.emit('user-name', userName);
     });
     socket.on('disconnect', () => { // Getting name for disconnected user
         console.log(`${socket.userName} left the chat`);
