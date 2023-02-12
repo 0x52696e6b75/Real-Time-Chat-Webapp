@@ -9,6 +9,11 @@ body {
     height: 50px;
 }
 
+.welcome {
+    max-width: 879px;
+    margin: auto;
+}
+
 .container {
     background-color: #bcdb1f;
     max-width: 900px;
