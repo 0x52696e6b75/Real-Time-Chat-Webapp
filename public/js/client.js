@@ -26,6 +26,15 @@ socket.on('user-joined', (userName) => {
     document.getElementById('box').appendChild(para);
 });
 
+socket.on('user-name', userName => {
+    // Displaying user name
+    const username = document.createElement("h3");
+    username.innerHTML = `${userName}`;
+    username.classList.add('fw-formal');
+    // username.classList.add('userjoined-center');
+    document.getElementById('user-name').appendChild(username);
+});
+
 // User left broadcast
 socket.on('user-left', (userName) => {
     // alert(`${userName} left the chat`);
