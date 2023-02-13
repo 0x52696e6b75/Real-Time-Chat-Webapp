@@ -6,32 +6,21 @@ var input = document.getElementById('messageInp');
 const userName = prompt("Enter your name to join");
 socket.emit('new-user-joined', userName);
 
-// Append function messages sent/received
-// const appendMsg = (message, possition) => {
-//     const messageElement = document.createElement("div");
-//     messageElement.innerHTML = message;
-//     messageElement.classList.add('message'); 
-//     messageElement.classList.add(possition);
-
-// }
-
-
 // New user joined broadcast
 socket.on('user-joined', (userName) => {
     // alert(`${userName} joined the chat`);
     const para = document.createElement("div");
     para.innerHTML = `${userName} joined the chat`;
     para.classList.add('newuser-box');
-    // para.classList.add('userjoined-center');
     document.getElementById('box').appendChild(para);
 });
 
+// Listening for user-name event for displaying user name
 socket.on('user-name', userName => {
     // Displaying user name
     const username = document.createElement("h3");
     username.innerHTML = `${userName}`;
     username.classList.add('fw-formal');
-    // username.classList.add('userjoined-center');
     document.getElementById('user-name').appendChild(username);
 });
 
@@ -41,7 +30,6 @@ socket.on('user-left', (userName) => {
     const para = document.createElement("div");
     para.innerHTML = `${userName} left the chat`;
     para.classList.add('newuser-box');
-    // para.classList.add('userjoined-center');
     document.getElementById('box').appendChild(para);
 });
 
@@ -54,7 +42,7 @@ form.addEventListener('submit', function(e) {
     }
 });
 
-// Displaying user own message to them on the right
+// Displaying user's own message to them on the right side
 socket.on('send', msg => {
     const para = document.createElement("div");
     para.innerHTML = `${msg}`;
@@ -63,7 +51,7 @@ socket.on('send', msg => {
     document.getElementById('box').appendChild(para);
 })
 
-// Displaying other users messges on the left
+// Displaying other users messges on the left side
 socket.on('receive', (data) => {
     const para = document.createElement("div");
     para.innerHTML = `<b> ${data.userName}:</b> <br> ${data.msg}`;

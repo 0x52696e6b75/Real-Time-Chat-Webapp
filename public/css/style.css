@@ -41,12 +41,6 @@ body {
     clear: both;
 }
 
-/* .userjoined-center {
-    margin: auto;
-    clear: both;
-    text-align: center;
-    background-color: #8a9ced;
-} */
 .newuser-box {
     background-color: rgba(148, 220, 244, 0.628);
     max-width: 20%;
@@ -55,8 +49,6 @@ body {
     text-align: center;
     font-size: 13px;
     clear: both;
-    /* margin-top: 15px;
-    margin-left: 8px; */
     border-radius: 16px;
 }
 
@@ -69,7 +61,6 @@ body {
 }
 
 #send-container {
-    /* background-color: rgb(9, 80, 142); */
     text-align: center;
     max-width: 900px;
     height: 60%;
