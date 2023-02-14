@@ -2,6 +2,7 @@ var socket = io();
 
 var form = document.getElementById('send-container');
 var input = document.getElementById('messageInp');
+var scrollbar = document.getElementById('box'); // Scroll bar 
 
 const userName = prompt("Enter your name to join");
 socket.emit('new-user-joined', userName);
@@ -49,6 +50,7 @@ socket.on('send', msg => {
     para.classList.add('message');
     para.classList.add('right');
     document.getElementById('box').appendChild(para);
+    scrollbar.scrollTop = scrollbar.scrollHeight; // Scroll bar always on bottom when new message sent
 })
 
 // Displaying other users messges on the left side
@@ -58,5 +60,5 @@ socket.on('receive', (data) => {
     para.classList.add('message');
     para.classList.add('left');
     document.getElementById('box').appendChild(para);
+    scrollbar.scrollTop = scrollbar.scrollHeight; // Scroll bar always on bottom when new message recieved
 });
-
