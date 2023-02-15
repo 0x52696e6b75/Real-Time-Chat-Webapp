@@ -14,6 +14,7 @@ socket.on('user-joined', (userName) => {
     para.innerHTML = `${userName} joined the chat`;
     para.classList.add('newuser-box');
     document.getElementById('box').appendChild(para);
+    scrollbar.scrollTop = scrollbar.scrollHeight; // Scroll bar always at bottom for the new user joined notification
 });
 
 // Listening for user-name event for displaying user name
@@ -32,6 +33,7 @@ socket.on('user-left', (userName) => {
     para.innerHTML = `${userName} left the chat`;
     para.classList.add('newuser-box');
     document.getElementById('box').appendChild(para);
+    scrollbar.scrollTop = scrollbar.scrollHeight; // Scroll bar always at bottom for the new user joined notification
 });
 
 // Listening for message sent event/form submit
