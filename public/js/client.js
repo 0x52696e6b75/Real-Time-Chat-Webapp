@@ -49,7 +49,7 @@ form.addEventListener('submit', function(e) {
 socket.on('send', msg => {
     const para = document.createElement("div");
     para.innerHTML = `${msg}`;
-    para.classList.add('message');
+    para.classList.add('message-box');
     para.classList.add('right');
     document.getElementById('box').appendChild(para);
     scrollbar.scrollTop = scrollbar.scrollHeight; // Scroll bar always on bottom when new message sent
@@ -59,7 +59,7 @@ socket.on('send', msg => {
 socket.on('receive', (data) => {
     const para = document.createElement("div");
     para.innerHTML = `<b> ${data.userName}:</b> <br> ${data.msg}`;
-    para.classList.add('message');
+    para.classList.add('message-box');
     para.classList.add('left');
     document.getElementById('box').appendChild(para);
     scrollbar.scrollTop = scrollbar.scrollHeight; // Scroll bar always on bottom when new message recieved

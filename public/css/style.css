@@ -16,7 +16,6 @@ body {
 
 /* active user container */
 .activity-area {
-    /* background-color: whitesmoke; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -29,7 +28,7 @@ body {
     background-color: #f6f8ef;
     flex: 16%;
     border-radius: 6px;
-    margin-left: 4px;
+    /* margin-left: 4px; */
     padding: 2px;
     text-align: center;
     overflow-y: auto;
@@ -45,30 +44,32 @@ body {
 .msg-container {
     background-color: #f6f8ef;
     /* max-width: 900px; */
-    width: 98%;
-    margin: auto;
+    width: 99%;
+    margin-left: 1%;
     height: 60vh;
+    word-wrap: break-word;
     /* Auto scroll bar */
     overflow-y: auto;
+    overflow-x: hidden;
 }
 /* Custom scroll bar */
 .msg-container::-webkit-scrollbar {
-width: 12px;
-height: 12px;
+    width: 12px;
+    height: 12px;
 }
 .msg-container::-webkit-scrollbar-track {
-border: 2px solid yellowgreen;
-border-radius: 10px;
+    border: 2px solid yellowgreen;
+    border-radius: 10px;
 }
 .msg-container::-webkit-scrollbar-thumb {
-background: rgb(135, 201, 5);
-border-radius: 10px;
+    background: rgb(135, 201, 5);
+    border-radius: 10px;
 }
 .msg-container::-webkit-scrollbar-thumb:hover {
-background: #699707;
+    background: #699707;
 }
 
-.message {
+.message-box {
     background-color: yellowgreen;
     max-width: 35%;
     padding: 10px;
@@ -88,10 +89,14 @@ background: #699707;
     clear: both;
 }
 
+/* .left + .left {
+    background-color: rebeccapurple;
+}  */
+
 .newuser-box {
     background-color: rgba(148, 220, 244, 0.628);
     max-width: 20%;
-    padding: 10px;
+    padding: 6px;
     margin: auto;
     text-align: center;
     font-size: 12px;
@@ -101,28 +106,29 @@ background: #699707;
 
 .send {
     background-color: #1fa38b;
-    /* max-width: 900px; */
-    width: 98%;
-    margin: auto;
+    width: 99%;
+    margin-left: 1%;
     height: 8vh;
     padding-top: 10px;
 }
 
 #send-container {
-    text-align: center;
-    /* max-width: 900px; */
+    display: flex;
+    flex-direction: row;
+    max-width: 550px;
     height: 60%;
     margin: auto;
 }
 
 #messageInp {
-    width: 80%;
+    flex: 90%;
     height: 100%;
     border-radius: 10px;
+    margin-right: 2px;
 }
 
 .button {
-    width: 50px;
+    flex: 10%;
     height: 100%;
     border-radius: 10px;
 }
